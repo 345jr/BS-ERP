@@ -26,13 +26,13 @@ CREATE TABLE `user` (
   `id` BIGINT PRIMARY KEY AUTO_INCREMENT COMMENT '主键',
   `user_name` VARCHAR(64) NOT NULL COMMENT '用户名(登录名)',
   `nick_name` VARCHAR(64) NOT NULL COMMENT '昵称(显示名)',
-  `password` CHAR(64) NOT NULL COMMENT '密码哈希 (SHA2-256)',
-  `status` CHAR(1) DEFAULT '0' COMMENT '账号状态 0=正常 1=停用',
+  `password` CHAR(64) NOT NULL COMMENT '密码哈希 (SHA2-256)'，
+  `status` CHAR(1) DEFAULT '0' COMMENT '账号状态 0=正常 1=停用'，
   `email` VARCHAR(64) DEFAULT NULL COMMENT '邮箱',
   `phonenumber` VARCHAR(32) DEFAULT NULL COMMENT '手机号',
-  `sex` CHAR(1) DEFAULT '2' COMMENT '性别 0=男 1=女 2=未知',
+  `sex` CHAR(1) DEFAULT '2' COMMENT '性别 0=男 1=女 2=未知'，
   `avatar` VARCHAR(128) DEFAULT NULL COMMENT '头像 URL',
-  `user_type` CHAR(1) NOT NULL DEFAULT '1' COMMENT '用户类型 0=管理员 1=普通员工',
+  `user_type` CHAR(1) NOT NULL DEFAULT '1' COMMENT '用户类型 0=管理员 1=普通员工'，
   `create_time` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   `deleted` TINYINT DEFAULT 0 COMMENT '删除标志 0=未删除 1=已删除',
